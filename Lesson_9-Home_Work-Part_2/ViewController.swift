@@ -42,8 +42,9 @@ class ViewController: UIViewController {
             
             movingRedView.center = CGPoint(x: initialCenter.x + translation.x, y: initialCenter.y + translation.y)
             
+        //  view возвращается на начальную позицию
         case .ended,
-                .cancelled:
+             .cancelled:
             UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveEaseInOut]) {
                 self.movingRedView.center = self.view.center
             }
